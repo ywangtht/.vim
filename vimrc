@@ -44,10 +44,32 @@ set hlsearch
 syntax enable
 syntax on
 filetype indent on
-set expandtab
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+
+au BufNewFile,BufRead *.py
+                        \ set tabstop=4
+                        \ softtabstop=4
+                        \ shiftwidth=4
+                        \ textwidth=100
+                        \ expandtab
+                        \ autoindent
+                        \ fileformat=unix
+
+au BufNewFile,BufRead *.cpp
+                        \ set tabstop=2
+                        \ softtabstop=2
+                        \ shiftwidth=2
+                        \ expandtab
+                        \ autoindent
+                        \ fileformat=unix
+
+au BufNewFile,BufRead *.h
+                        \ set tabstop=2
+                        \ softtabstop=2
+                        \ shiftwidth=2
+                        \ expandtab
+                        \ autoindent
+                        \ fileformat=unix
+
 set backspace=indent,eol,start
 
 " nerdtree
